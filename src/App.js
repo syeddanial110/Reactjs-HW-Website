@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
+import Home from './screens/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button, Form } from 'react-bootstrap';
+// import { useEffect, useState } from 'react';
+// import { Row } from 'react-bootstrap';
+import PixabayApiFetch from './screens/PixabayApiFetch';
+import JsonPlaceholder from './screens/JsonPlaceholder';
+
+
 
 function App() {
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+         <Header />
+         
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/pixabay" element={<PixabayApiFetch />} />
+        <Route path="/json" element={<JsonPlaceholder />} />
+        
+      </Routes>
+
+      </Router>
+
+  
+    
+     
+    </>
   );
 }
 
