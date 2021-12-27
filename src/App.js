@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Row } from 'react-bootstrap';
 import PixabayApiFetch from './screens/PixabayApiFetch';
 import JsonPlaceholder from './screens/JsonPlaceholder';
+import Allscreens from './screens/Allscreens';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/pixabay" element={<PixabayApiFetch />} />
         <Route path="/json" element={<JsonPlaceholder />} />
+        <Route path="/allList" element={<Allscreens />} />
         
       </Routes>
 

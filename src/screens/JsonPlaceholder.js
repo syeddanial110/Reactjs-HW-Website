@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react'
 // import { Helmet } from 'react-helmet'
 import axios from "axios";
 
-const JsonPlaceholder = () => {
+const JsonPlaceholder = (props) => {
+    const {heading,textCenter,textPadding,dataPosition,dataPadding,dataMargin}=props;
     const [post, setPost] = useState([])
   useEffect(async()=>{
     try {
@@ -19,6 +20,7 @@ const JsonPlaceholder = () => {
   },[])
     return (
         <>
+        <h1 style={{textAlign:textCenter, padding:textPadding}} >{heading}</h1>
 
                 <ul>
                     {/* <table> */}
@@ -46,7 +48,7 @@ const JsonPlaceholder = () => {
                     <th>Body</th>
                   </tr> */}
                   <tr>
-                    <td style={{padding:"15px"}}>{posts.url}</td>
+                    <td style={{textAlign:dataPosition, padding:dataPadding, margin:dataMargin}}>{posts.url}</td>
                     
                   </tr>
                 </table>

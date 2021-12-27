@@ -49,7 +49,8 @@ import { useEffect, useState } from 'react'
 
 
 
-const PixabayApiFetch = () => {
+const PixabayApiFetch = (props) => {
+    const {heading,textCenter,textPadding}=props
     var ApiKey='24952702-0fb54b5d053c710c62a7c1222';
     // const[video,setVideo] =useState([])
     const videoType=["all", "film", "animation" ]
@@ -74,7 +75,7 @@ const PixabayApiFetch = () => {
       return (
        
           <>
-              
+              <h1 style={{textAlign:textCenter, padding:textPadding}} >{heading}</h1>
                   {/* <CustomTitle title="OurTeam" /> */}
   
                   <ul>

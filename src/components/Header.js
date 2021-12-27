@@ -12,6 +12,7 @@ const Header = () => {
     <Link className='p-3 linkBtnHome linkBtn' to="/home">Home</Link>
     <Link className='p-3 linkBtnHome linkBtn' to="/pixabay">Api Fetch</Link>
     <Link className='p-3 linkBtnHome linkBtn' to="/json">Json Api</Link>
+    <Link className='p-3 linkBtnHome linkBtn' to="/allList">All List</Link>
     </Nav>
     </Container>
   </Navbar>

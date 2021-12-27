@@ -80,13 +80,17 @@ const Home = () => {
 
 // }
 
+// function mySubmit(){
+//    setTodo(todo)
+// }
+
   return (
     <>
   
 
       {/* Todo List */}   
       
-      <div className="mb-3 w-50 p-5">
+      {/* <div className="mb-3 w-50 p-5">
         <label  className="form-label">Enter To do</label>
         <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Enter what do you want" value={todo} onChange={(e)=>{setTodo(e.target.value)}} />
         <div className="mt-3 col-auto">
@@ -102,8 +106,21 @@ const Home = () => {
         </tr>
         <tbody></tbody>
       </table>
+     */}
+
+     <form>
+     <div className="mb-3">
+          <label  className="form-label">First Name</label>
+          <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={todo} onChange={(e)=>{setTodo(e.target.value)}} />
+        </div>
+        <button type="submit" className="btn btn-primary" onClick={(e)=>{e.preventDefault(); console.log({todo})} }> Submit </button>
+     </form>
     
-     
+
+
+
+
+
     </>
   );
 }
